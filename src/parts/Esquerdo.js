@@ -3,11 +3,9 @@ import Estilo from '../assets/css/Estilo.module.css'
 import {niveis, calcularIMC} from '../helpers/imc'
 
 const Esquerdo = () => {
-  const listaIMC = ['Abaixo', 'Ideal', 'Acima', 'Obesidade']
-
   const [altura, setAltura] = useState(0)
   const [peso, setPeso] = useState(0)
-  const [imc, setIMC] = useState(0)
+  const [mostrador, setMostrador] = useState(null)
 
   const addAltura = (valor) => {
     setAltura(valor.target.value)
@@ -15,6 +13,15 @@ const Esquerdo = () => {
 
   const addPeso = (valor) => {
     setPeso(valor.target.value)
+  }
+
+  const calcularBotao = () => {
+    if (altura && peso){
+      setMostrador(calcularIMC(altura, peso))
+    }
+    else{
+      alert("Digite todos os campos")
+    }
   }
 
   return(
@@ -42,7 +49,7 @@ const Esquerdo = () => {
       </form>   
       <div>
         <hr/>
-        O resultado é {imc}
+        O resultado é 
       </div>
     </div>
   )
