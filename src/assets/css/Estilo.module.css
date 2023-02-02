@@ -1,0 +1,74 @@
+.app {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 10%;
+}
+.container {
+  display: flex;
+  margin: auto;
+  max-width: 900px;
+}
+
+/* CABEÇALHO ================= */
+.cabecalho {
+  width: 100%;
+}
+.cabecalho img {
+  height: 50px;
+}
+
+/* ESQUERDO ================== */
+.esquerdo {
+  width: 50%;
+  float: left;
+  flex: 1;
+}
+.esquerdo h1 {
+  font-size: 40px;
+  color: #3a4b5c
+}
+.esquerdo p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #6a7d8b;
+}
+.esquerdo input{
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid rgba(150,163,171,.5);
+  padding: 10px 2px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  outline: 0;
+}
+.esquerdo button {
+  background-color: #227c90;
+  color: #fff;
+  font-size: 15px;
+  border: 0;
+  border-radius: 10px;
+  padding: 15px 0;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: all ease .3s;
+}
+.esquerdo button:hover{
+  opacity: .8;
+}
+
+/* DIREITO =================== */
+.direito {
+  float: right;
+  flex: 1;
+  display: flex;
+  margin-left: 40px;
+
+}
+.grid{
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}

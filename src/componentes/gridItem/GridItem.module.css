@@ -1,0 +1,27 @@
+.main {
+  flex: 1; /*Pega toda a área da box*/
+  color: #fff;
+  border-radius: 10px;
+  display: flex; 
+  justify-content: center; /*Centraliza na horizontal*/
+  align-items: center; /*Centraliza na vertical*/
+  flex-direction: column; /*Um abaixo do outro*/
+  padding: 20px;
+}
+.icon{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0, .1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titulo {
+  font-size: 20px;
+  margin-top: 5px;
+}
+.info {
+  font-size: 14px;
+  margin-top: 14px;
+}
