@@ -10,8 +10,10 @@ export const calcularIMC = (altura, peso) => {
 
   for (let chave in niveis){
     if (imcPessoa >= niveis[chave].imc[0] && imcPessoa < niveis[chave].imc[1]){
-      niveis[chave].seuImc = imcPessoa.toFixed(1)
-      return niveis[chave]
+      let niveisCopy = {...niveis[chave]};
+      
+      niveisCopy.seuImc = imcPessoa.toFixed(1)
+      return niveisCopy
     }
   }
   return null

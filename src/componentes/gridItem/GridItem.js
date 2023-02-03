@@ -20,9 +20,6 @@ export const GridItem = ({item}) => {
           O seu IMC é de {item.seuImc} kg/m2
         </div>
       }
-      {!item.seuImc &&
-        <div>Sem IMC</div>
-      }
 
       <div className={EstiloGrid.info}> 
         <>
