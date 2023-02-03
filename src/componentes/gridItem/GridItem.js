@@ -1,4 +1,4 @@
-import { niveis } from "../../helpers/imc";
+import { niveis, calcularIMC } from "../../helpers/imc";
 import Estilo from "../../assets/css/Estilo.module.css"
 import EstiloGrid from './GridItem.module.css'
 import upImagem from '../../assets/images/up.png'
@@ -14,6 +14,16 @@ export const GridItem = ({item}) => {
       <div className={EstiloGrid.titulo}> 
         {item.titulo}
       </div>
+
+      {item.seuImc && 
+        <div className={Estilo.seuimc} style={{marginTop: '10px'}}>
+          O seu IMC é de {item.seuImc} kg/m2
+        </div>
+      }
+      {!item.seuImc &&
+        <div>Sem IMC</div>
+      }
+
       <div className={EstiloGrid.info}> 
         <>
           IMC está entre <strong>{item.imc[0]}</strong> e <strong>{item.imc[1]}</strong>

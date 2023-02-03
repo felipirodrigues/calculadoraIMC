@@ -3,6 +3,7 @@ import Cabeçalho from './parts/Cabecalho'
 import { GridItem } from './componentes/gridItem'
 import { niveis, calcularIMC } from './helpers/imc'
 import { useState } from 'react'
+import setaVoltar from './assets/images/leftarrow.png'
 
 function App() {
 
@@ -25,6 +26,12 @@ function App() {
     else{
       alert("Digite todos os campos")
     }
+  }
+
+  const botaoVoltar = () => {
+    setMostrador(null)
+    setAltura('')
+    setPeso('')
   }
 
 
@@ -69,7 +76,10 @@ function App() {
               )
             }
             {mostrador &&
-              <div>
+              <div className={Estilo.direitoGrande}>
+                <div className={Estilo.direitoFlexa} onClick={botaoVoltar}>
+                  <img src={setaVoltar}/>
+                </div>
                 <GridItem item={mostrador}/>
               </div>
             }

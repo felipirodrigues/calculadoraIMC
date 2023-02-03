@@ -6,6 +6,7 @@
 }
 .container {
   display: flex;
+  flex: 1;
   margin: auto;
   max-width: 900px;
 }
@@ -60,11 +61,31 @@
 
 /* DIREITO =================== */
 .direito {
-  float: right;
   flex: 1;
   display: flex;
   margin-left: 40px;
+  padding-right: 0px;
+}
 
+.direitoGrande {
+  display: flex;
+  flex: 1;
+  width: 400px;
+  margin-right: 0px;
+}
+.direitoFlexa{
+  position: absolute;
+  background-color: #227c9D;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: -55px;
+  margin-top: 145px;
+  padding: 30px;
 }
 .grid{
   flex: 1;

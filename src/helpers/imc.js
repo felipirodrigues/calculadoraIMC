@@ -6,11 +6,11 @@ export const niveis = [
 ]
 
 export const calcularIMC = (altura, peso) => {
-  const imc = peso / (altura * altura)
+  const imcPessoa = peso / (altura * altura)
 
   for (let chave in niveis){
-    if (imc >= niveis[chave].imc[0] && imc < niveis[chave].imc[1]){
-      niveis[chave].seuImc = imc
+    if (imcPessoa >= niveis[chave].imc[0] && imcPessoa < niveis[chave].imc[1]){
+      niveis[chave].seuImc = imcPessoa.toFixed(1)
       return niveis[chave]
     }
   }
