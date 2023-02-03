@@ -54,15 +54,17 @@ function App() {
                   type="number"
                   placeholder='Digite sua altura. Ex 1.75 (em metros)'
                   value={altura>0 ? altura : ''}
-                  onChange={addAltura}        
+                  onChange={addAltura} 
+                  disabled={mostrador ? true : false}       
               />
               <input 
                   type="number"
                   placeholder='Digite seu peso. Ex 75.5 (em kg)'
                   value={peso>0 ? peso : ''}
                   onChange={addPeso}        
+                  disabled={mostrador ? true : false}
               />
-              <button onClick={calcularBotao}>Calcular</button>
+              <button onClick={calcularBotao} disabled={mostrador ? true : false}>Calcular</button>
               
           </div>
         </div>
